@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply break</title>
+</head>
+
+<body>
+
+    <input type="number" id="distance" placeholder="enter the distance">
+    <input type="number" id="time" placeholder="enter the time">
+    <button onclick=check()>click</button>
+
+</body>
+
+<script>Z
+    function check(){
+        console.log("click");
+        var distance = document.getElementById("distance").value
+        var time = document.getElementById("time").value
+        var speed = diastance / time ;
+
+        if (speed > 40){
+            console.log("apply break")
+        }
+        else{
+            console.log("keep going")
+        }
+    }
+</script>
+</html>

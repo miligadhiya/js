@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comapre 2 number</title>
+</head>
+<body>
+    <input type="number" id="a" placeholder="enter the a">
+    <input type="number" id="b" placeholder="enter the b">
+    <button onclick="getAge">click</button>
+</body>
+<script>
+    function getAge(){
+        console.log("click");
+        var a = presetInt(document.getElementById("a").value);
+        var b = presetInt(document.getElementById("b").value);
+        if(a>b){
+            console.log("a is big");
+        }
+        else if(b>a){
+            console.log("b is big");
+        }
+        else{
+            console.log("both are same");
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = document.createElement("p");
+        name.innerHTML = "mili";
+        name.addEventListener("click",getimg)
+        document.querySelector("body").append(name);
+        function getimg(){
+            let img = document.createElement("img");
+            img.src="https://tse3.mm.bing.net/th?id=OIP.Tu7sk93iwdQ3X_zHwTynLAHaEv&pid=Api&P=0"
+            document.querySelector("body").append(img);
+        }
+    </script>
+</body>
+</html>

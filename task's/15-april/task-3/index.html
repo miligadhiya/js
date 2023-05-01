@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculation</title>
+</head>
+<body style="background-color: rgb(79, 98, 108);">
+    <div style="margin-left: 43%;">
+        <input type="number" placeholder="Enter the a" id="num.1" style="background-color: bisque;border-radius: 5px; border: none; padding: 10px; display: block;margin-bottom: 10px;">
+        <input type="number" placeholder="Enter the b" id="num.2" style="background-color: bisque; border-radius: 5px;border: none; padding: 10px;">
+    </div>
+    <hr style="width:50%">
+    <h1 id="ans" style="color: white;text-align: center;"></h1>
+    <hr style="width:50%">
+    
+        <button onclick="add()" style="background-color: bisque; border: none; padding: 10px;border-radius: 5px;width: 100px; margin-left:542PX;">add</button>
+        <button onclick="multi()" style="background-color: bisque; border: none; padding: 10px;border-radius: 5px;width: 100px;">multi</button>
+        <button onclick="div()" style="background-color: bisque; border: none; padding: 10px;border-radius: 5px;width: 100px;">div</button>
+        <button onclick="sub()" style="background-color: bisque; border: none; padding: 10px;border-radius: 5px;width: 100px;">sub</button>
+    <script>
+        function add(){
+            var n1 = parseInt(document.getElementById("num.1").value);
+            var n2 = parseInt(document.getElementById("num.2").value);
+            sum = n1 + n2;
+            console.log(sum);
+            document.getElementById("ans").innerHTML=sum;
+        }
+        function multi(){
+            var n1 = parseInt(document.getElementById("num.1").value);
+            var n2 = parseInt(document.getElementById("num.2").value);
+            multi = n1 * n2;
+            console.log(multi);
+             document.getElementById("ans").innerHTML=multi; 
+        }
+        function div(){
+            var n1 = parseInt(document.getElementById("num.1").value);
+            var n2 = parseInt(document.getElementById("num.2").value);
+            div = n1 / n2;
+            console.log(div);
+            document.getElementById("ans").innerHTML=div;
+        }
+        function sub(){
+            var n1 = parseInt(document.getElementById("num.1").value);
+            var n2 = parseInt(document.getElementById("num.2").value);
+            sub = n1 - n2;
+            console.log(sub);
+            document.getElementById("ans").innerHTML=sub;
+        }
+    </script>
+</body>
+</html>

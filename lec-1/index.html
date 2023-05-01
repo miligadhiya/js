@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<body>
+    <form action="" id="form">
+    <input type="text" placeholder="enter your name" id="name">
+    <input type="email" placeholder="enter your mail" id="email">
+    <input type="number" placeholder="enter your number" id="numbar">
+    <input type="text" placeholder="enter your age" id="age">
+    <input type="submit">
+
+    </form>
+</body>
+
+<table border="2px" cellspacing="10px" cellspadding="10px" width="70%">
+    <thead>
+        <th>name</th>
+        <th>email</th>
+        <th>number</th>
+        <th>age</th>
+    </thead>
+    <tbody id="result"></tbody>
+</table>
+
+    <script>
+        document.getElementById("form").addEventListener("submit",function(e){
+            e.preventDefault()
+            let name=document.getElementById("name").value
+            let number=document.getElementById("numbar").value
+            let email=document.getElementById("email").value
+            let age=document.getElementById("age").value
+console.log("working");
+            let data = {
+                name:name,
+                number:number,
+                email:email,
+                age:age
+            }
+            console.log(data);      
+            let tr=document.createElement('tr')
+
+            let h1 =document.createElement('td')
+            h1.innerHTML =`${data.name}`
+            let h2 =document.createElement('td')
+            h2.innerHTML = `${data.number}`
+            let h3 =document.createElement('td')
+            h3.innerHTML =` ${data.email}`
+            let h4 =document.createElement('td')
+            h4.innerHTML =`${data.age}`
+
+            tr.append(h1,h3,h2,h4)
+            console.log(tr);
+            document.getElementById("result").append(tr)
+      
+        })
+    </script>
+
+</html>

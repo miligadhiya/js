@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>convert lower case to upper case</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the number" id="name">
+    <button onclick=check()>check</button>
+    <h1 id="ans">ans</h1>
+    <script>
+        function check(){
+            console.log("click");
+            var name = document.getElementById('name').value
+            console.log(name.toUpperCase());
+            document.getElementById("ans").innerHTML=(name.toUpperCase)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="name" placeholder="enter your name">
+        <br>
+        <input type="number" id="number" placeholder="enter your number">
+        <br>
+        <input type="email" id="email" placeholder="enter your email">
+        <br>
+        <input type="number" id="age" placeholder="enter your age">
+        <br>
+        <input type="submit">
+    </form>
+    <table border="2px" cellspacing="10px" cellpadding="15px">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>number</th>
+                <th>email</th>
+                <th>age</th>
+                <th id="del">delete</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <button onclick="window.print()">print</button>
+</body>
+<script>
+    document.getElementById("form").addEventListener("submit",function(e){
+        e.preventDefault();
+        console.log("submit");
+        let name = document.getElementById("name").value;
+        let number = document.getElementById("number").value;
+        let email = document.getElementById("email").value;
+        let age = document.getElementById("age").value;
+
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerHTML = name;
+        let td2 = document.createElement("td");
+        td1.innerHTML = number;
+        let td3 = document.createElement("td");
+        td1.innerHTML = email;
+        let td4 = document.createElement("td");
+        td1.innerHTML = age;
+        let td5 = document.createElement("td");
+        td5.innerHTML =" delete";
+        td5.addEventListener("click",del);
+
+        function del(event){
+            console.log(event.target);
+            event.target.parentNode.remove()
+            console.log("click");
+        }
+        tr.append(td1,td2,td3,td4,td5);
+        document.getElementById("tbody").append(tr);
+
+        document.getElementById("del").addEventListener("click",function(){
+            document.getElementById("tbody").innerHTML=""
+        })
+        
+    });
+</script>
+</html>
